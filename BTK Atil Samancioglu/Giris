@@ -1,0 +1,31 @@
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d3eb6568-2627-41d6-a62f-ccf94439770b/Untitled.png)
+
+Mavi noktalar checkpointler , her checkpoint bir commit, save alıyoruz 🙂
+
+repolar→projeler
+
+### Terminal Kullanımı
+
+ls → list 
+
+clear → clear
+
+pwd → print working directory (nerede oldugunu gösterir)
+
+cd Documents → Documents klasörünün içerisine girer
+
+cd .. → bir önceki klasöre geri gel
+
+mkdir → make directory (klasör oluştur)
+
+touch not.txt → metin dosyası oluştur
+
+rm not.txt → metin dosyasını sil
+
+rm -rf DyingLight → DyingLight klasörünü sil 
+
+git → help documention , yardım dökumanı
+
+git config --global user.name “isim”  → kayıt olurken yapıyoz (git config: konfigrasyon degistiriyoruz, global olarak her yerde gecerli olacak, kullanıcının ismini degistiriyoz)
+
+git config -- global user.email “email@hotmail.com” → aynı olay
