@@ -1,0 +1,77 @@
+# Git Branch
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/3a90193a-ea19-477d-8606-78e5c5fe0b8e/Untitled.png)
+
+master → ana branch demek
+
+HEAD → bizim git içerisinde güncel olarak hangi konumda oldugumuzu gösteriyor, genelde son commit’i gösterir örneğin burada hem master’dayız hem bu commit’in içerisindeyiz.
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c308cd05-beab-403c-873e-32bcd3f29b84/Untitled.png)
+
+hangi commit’e gidersek, branch değişir head oraya gelir
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/a27d4259-1014-477a-a327-90c36b6c9794/Untitled.png)
+
+git branch feat → branch’a feat belirlir (feat: feature, özellik)  
+
+### commit atarsam
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/a2846b5a-fc69-4c96-bf55-aae36d03273c/Untitled.png)
+
+### switch yaparsam
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/a6a8e69e-1012-453d-ace4-5d9f430848ed/Untitled.png)
+
+git switch master → master’a geri döndüm çünkü içerisinde bazı değişiklikler yapmak gerekiyor
+
+### master’da commit atmaya başladım
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f3f7e884-704b-4018-bffd-02c3ce70fbec/Untitled.png)
+
+### branchleri birbirine bağlamak
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/37224666-c2dd-4097-9297-6aaf9633301b/Untitled.png)
+
+git merge feat → feat branch’i ile master branch’ini birbirine bağlamak için
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/a16d4122-d879-4224-9640-29e8da02f912/Untitled.png)
+
+master’da hiçbir değişiklik yapılmadan hop diye yeni branch’i aldıysak buna Fast Forwarding deniliyor
+
+---
+
+---
+
+git restore <file>—> bir şeyleri yanlış yaparsan en sonki commit’e dönmeyi sağlar
+
+---
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/afb38015-a5f1-45a1-ae00-55b5eaca422f/Untitled.png)
+
+Örneğin biz Feat branch’indeyiz ve patron aradı dediki acil şöyle şöyle yapman gerekiyor dedi. 
+
+Mecbur Master branch’ine geri döndük git switch master yaptık. 
+
+Yani , 1-commit etmeye hazır değildik commit atmadık, 2-branch değiştirmek zorunda kaldık(Feat’den master’a geçtik) ve 3-feat’deki yaptığım değişiklikleri kaybetmek istemeyeceğim.
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/aa603238-5685-4cb0-80b4-87dffadf5809/Untitled.png)
+
+Üç madde de başına gelirse bunun için stash var. Bir nevi çalışma klasörünün, stage’in dışında kalan zulalama yeri.
+
+Bu durumda: Master branch’ine dönmden Feat branch’indeyken git stash yaptık. 
+
+Git master’da işlerimi hallettim, ve git switch feat yaparak çalıştığım branch’e geri döndüm. Uğraştığım dosya gitti gibi gözüküyor ama ben bunu ne yapmıştım? Saklamıştım, stash’lemiştim.
+
+git stash pop —> kaldığım dosyayı zuladan geri aldım
+
+git stash list —> güncel stash’lerimi, güncel zulaladıklarımı verir
+
+Örneğin
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/a66c069a-92e4-48b5-b479-9a436f104680/Untitled.png)
+
+Dosyayı değiştirdik ve bunu da stash ettik bu durumda İki kere git stash yaptık. Önceki stash’e dönmek istersek git stash apply stash@{0} yaptık.
+
+git stash clear —> bütün mevcut stash listi siler
+
+Bu detaylar çokta önemli değil olur da lazım olursa bilmek gereken iki komut: git stash ve git stash pop

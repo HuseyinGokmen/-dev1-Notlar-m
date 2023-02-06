@@ -1,0 +1,77 @@
+# Git Temelleri
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/3b4460e9-f7db-4581-b018-6f38c79b4e14/Untitled.png)
+
+maviş noktalar kaydetmedir —> commit işlemi
+
+arkadaşıma dedimki sende bu uygulamanın mesajlaşma kısmını yaz —> ikiye ayrılması branch
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/597ebfdc-2ccb-42e8-9431-92c34c808b29/Untitled.png)
+
+Mesajlaşma branch’i
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d706d840-52f1-40e6-942e-0623e7355fa2/Untitled.png)
+
+Belli bir yerde, yeni bir commit’de birleşme yapıldı diyebiliriz. Ve herkesin attığı commit sayesinde hepsi kayıtlı ve istediğim her noktaya geri gelebilirim! 
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/87b4396e-10a4-4305-8bbe-168bb9da04a8/Untitled.png)
+
+Bizim normalde çalışma klasörümüz varsa **git add** dediğimizde staging yani sahne dediğimiz bir yere alıyoruz. Şu demek: Yazdım, Yazdım, Yazdım tamam didim komitleyecem ama henüz commitlemedim, arafta duruyor.
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/6b896e30-2c67-4c20-bc48-3ec6d3f25a30/Untitled.png)
+
+vee commit zamanı save aldık **git commit** ile, repoya gönderdik
+
+(Local Repository: git içeren, versiyon kontrol sistemi içeren genel projeden bahsediyoruz)
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/fb34dd0c-6f3a-442b-b41c-68907df13139/Untitled.png)
+
+---
+
+---
+
+---
+
+---
+
+---
+
+# Git Init ve Status
+
+git status → bana güncel durumu göster
+
+git init → initialize, başlatma, takip yap
+
+- git init çalıştırmadan önce mutlaka onun git status ile güncel durumunu öğren
+
+ls ile gizli klasörler gözükmüyorsa ls -la ile gizli klasörler gözükür
+
+git add → üst görsellerde  de gördüğün gibi stage’e aldık, “hah dedi hinci beni commit edebilir”
+
+git commit -m “new 1 ve new 2 olusturuldu” —> commit atmak böyle olmak zorunda -m “” ile mesaj belirtmek zorundasın çünkü ileride bir bakmışsın 100 lerce commit var ne idüğü belirsiz…
+
+git log —> logları görürsün, 
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/e504caef-8ace-4fef-833f-8a70870a764a/Untitled.png)
+
+her commit’in kendine ait hash’i oluyor böyle bu commit’e dön şöyle böyle yap fln diye bu numarayı kullanıyoruz, “head → master” dediği güncel içerisinde bulunduğun branch’i referans alıp en son commit’i söyler. Kimin hangi tarihte commit attığını görmeni sağlar git log.
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f330b716-a1f0-4eac-8aa5-e952f02c5be8/Untitled.png)
+
+git add . —> yapınca tek tek yazmaktansa her şeyi eklemeyi sağlar (tabii bu bazen dezavantaj da olabilir bunu avantaja çevirmek için gitignore kullanacaz)
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/09be1bf4-e7b7-466b-96f1-44733d109945/Untitled.png)
+
+gizli.txt için biz gid add yapmayacağız çünkü onun içinde api key fln var
+
+touch .gitignore —> çalışma klasörümde klacak olan dosyaları .gitignore’a eklemek zorunlu
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d952407c-bd2e-4492-8043-07787e7b0035/Untitled.png)
+
+.gitignore’u açıp içine commitlenmesini istemediğim dosyayı yazdım
+
+Google’a gidip gitignore template c# olarak aratırsam 
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/cc2c52fd-0094-4bfa-93e1-276ab27e91fb/Untitled.png)
+
+ornek olarak alınmayan dosyaları görebilirim ileride profesyonel projede internete atmadan once bu templatlere bakman tavsiye olunur
